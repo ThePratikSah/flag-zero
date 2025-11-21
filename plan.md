@@ -30,9 +30,10 @@ config/
   - [x] MYSQL_DSN
   - [x] REDIS_ADDR
   - [x] SERVER_PORT
-- [ ] Add config loader in `/config`
-- [ ] Implement minimal HTTP server in `/cmd/server`:
-  - [ ] `/health` route
+- [x] Add config loader in `/config`
+- [x] Implement minimal HTTP server in `/cmd/server`:
+  - [x] `/health` route
+  - [x] `/ready` route
 - [ ] Add MySQL connection in `/internal/adapters/mysql`
 - [ ] Add Redis client in `/internal/adapters/redis`
 - [ ] Add `docker-compose.yml` with:

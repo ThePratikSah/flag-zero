@@ -1,7 +1,5 @@
 package config
 
-import "time"
-
 // Config represents the minimal application settings required to boot the
 // service. Each nested struct captures one concern (server, data stores,
 // application behavior) so that future configuration values can extend these
@@ -15,10 +13,10 @@ type Config struct {
 
 // ServerConfig holds network-facing settings for the HTTP server.
 type ServerConfig struct {
-	Host         string        `json:"host" yaml:"host"`
-	Port         string        `json:"port" yaml:"port"`
-	ReadTimeout  time.Duration `json:"readTimeout" yaml:"readTimeout"`
-	WriteTimeout time.Duration `json:"writeTimeout" yaml:"writeTimeout"`
+	Host         string `json:"host" yaml:"host"`
+	Port         string `json:"port" yaml:"port"`
+	ReadTimeout  int    `json:"readTimeout" yaml:"readTimeout"`
+	WriteTimeout int    `json:"writeTimeout" yaml:"writeTimeout"`
 }
 
 // DatabaseConfig captures the primary relational database connection details.
